@@ -4,6 +4,6 @@ import (
 	"log"
 )
 
-func Print(print string) {
+func Log(print string) {
 	log.Println(print)
 }

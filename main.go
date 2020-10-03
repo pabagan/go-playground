@@ -1,9 +1,15 @@
 package main
 
 import (
-	"recipes"
+	"log"
+
+	"github.com/pabagan/go-playground/recipes"
 )
 
 func main() {
-	recipes.Print("hola")
+	recipes.Log("hola")
+	recipes.Log("hola")
+	time := recipes.getTime()
+
+	log.Println(time)
 }
