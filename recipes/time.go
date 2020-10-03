@@ -7,29 +7,48 @@ import (
 	"time"
 )
 
-func getTime() time.Time {
+/*
+GetTime get current Golang timestamp
+*/
+func GetTime() time.Time {
 	return time.Now()
 }
 
-func addDaysToDate(days int) time.Time {
-	now := time.Now()
-
-	return now.AddDate(0, 0, days)
+/*
+AddDaysToDate add days to date
+*/
+func AddDaysToDate(
+	time time.Time,
+	days int,
+) time.Time {
+	return time.AddDate(0, 0, days)
 }
 
-func addMonthsToDate(months int) time.Time {
-	now := time.Now()
-
-	return now.AddDate(0, months, 0)
+/*
+AddMonthsToDate add months to date
+*/
+func AddMonthsToDate(
+	time time.Time,
+	months int,
+) time.Time {
+	return time.AddDate(0, months, 0)
 }
 
-func addDaysAndMonthsToDate(months, days int) time.Time {
-	now := time.Now()
-
-	return now.AddDate(0, months, days)
+/*
+AddDaysAndMonthsToDate add days to date
+*/
+func AddDaysAndMonthsToDate(
+	time time.Time,
+	months int,
+	days int,
+) time.Time {
+	return time.AddDate(0, months, days)
 }
 
-func timer() {
+/*
+Timer demo function
+*/
+func Timer() {
 	start := time.Now()
 	t := time.Now()
 
@@ -39,72 +58,37 @@ func timer() {
 	elapsed := t.Sub(start)
 	// since := time.Since(start)
 
-	println("Elapsed: ", elapsed)
-	println("Since: ", since)
+	fmt.Println("Elapsed: ", elapsed)
+	fmt.Println("Since: ", since)
 }
 
-// func stopExecutionSeconds(seconds int) {
-// 	time.Sleep(seconds * time.Second)
-// }
-func logTimes() {
-	fmt.Printf("Minute: %s", time.Minute)
-	fmt.Printf("Second: %s", time.Second)
-	fmt.Printf("Hour: %s", time.Hour)
-	fmt.Printf("Millisecond: %s", time.Millisecond)
-	fmt.Printf("Microsecond: %s", time.Microsecond)
-	fmt.Printf("Nanosecond: %s", time.Nanosecond)
-}
-
-func dateDemo() {
-	// https://golang.org/pkg/time/
-	now := time.Now()
-	// Prints duration until t
-	time.Sleep(3 * time.Second)
-
-	fmt.Println("Duration until t:", time.Until(now))
-	println(now.String())
-
-	// time.Now().Before(deadline)
-
+/*
+StopExecutionSeconds for a duration of seconds
+*/
+func StopExecutionSeconds(seconds time.Duration) {
 	start := time.Now()
-	// ... operation that takes 20 milliseconds ...
 	t := time.Now()
+
+	time.Sleep(seconds * time.Second)
+
 	since := time.Since(start)
 	elapsed := t.Sub(start)
 	// since := time.Since(start)
 
-	println("Elapsed: ", elapsed)
-	println("Since: ", since)
+	fmt.Println("Elapsed: ", elapsed)
+	fmt.Println("Since: ", since)
+	fmt.Println("Since seconds: ", since.Seconds())
+	fmt.Println("Since minutes: ", since.Minutes())
+}
 
-	fmt.Println("\nToday:", now)
-
-	after := now.AddDate(1, 0, 0)
-	fmt.Println("\nAdd 1 Year:", after)
-
-	after = now.AddDate(0, 1, 0)
-	fmt.Println("\nAdd 1 Month:", after)
-
-	after = now.AddDate(0, 0, 1)
-	fmt.Println("\nAdd 1 Day:", after)
-
-	after = now.AddDate(2, 2, 5)
-	fmt.Println("\nAdd multiple values:", after)
-
-	after = now.Add(10 * time.Minute)
-	fmt.Println("\nAdd 10 Minutes:", after)
-
-	after = now.Add(10 * time.Second)
-	fmt.Println("\nAdd 10 Second:", after)
-
-	after = now.Add(10 * time.Hour)
-	fmt.Println("\nAdd 10 Hour:", after)
-
-	after = now.Add(10 * time.Millisecond)
-	fmt.Println("\nAdd 10 Millisecond:", after)
-
-	after = now.Add(10 * time.Microsecond)
-	fmt.Println("\nAdd 10 Microsecond:", after)
-
-	after = now.Add(10 * time.Nanosecond)
-	fmt.Println("\nAdd 10 Nanosecond:", after)
+/*
+LogTimes in diferent measures
+*/
+func LogTimes() {
+	fmt.Printf("Minute: %s\n", time.Minute)
+	fmt.Printf("Second: %s\n", time.Second)
+	fmt.Printf("Hour: %s\n", time.Hour)
+	fmt.Printf("Millisecond: %s\n", time.Millisecond)
+	fmt.Printf("Microsecond: %s\n", time.Microsecond)
+	fmt.Printf("Nanosecond: %s\n", time.Nanosecond)
 }

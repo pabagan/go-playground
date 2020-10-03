@@ -7,9 +7,17 @@ import (
 )
 
 func main() {
-	recipes.Log("hola")
-	recipes.Log("hola")
-	time := recipes.getTime()
+	now := recipes.GetTime()
+	add1day := recipes.AddDaysToDate(now, 1)
+	add1month := recipes.AddMonthsToDate(now, 1)
+	add1monthAnd2Days := recipes.AddDaysAndMonthsToDate(now, 1, 2)
 
-	log.Println(time)
+	recipes.LogTimes()
+
+	log.Println("now:", now)
+	log.Println("add 1 day:", add1day)
+	log.Println("add 1 month:", add1month)
+	log.Println("add 1 month and 2 days:", add1monthAnd2Days)
+
+	recipes.StopExecutionSeconds(2)
 }
