@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/pabagan/go-playground/recipes"
@@ -19,5 +20,13 @@ func main() {
 	log.Println("add 1 month:", add1month)
 	log.Println("add 1 month and 2 days:", add1monthAnd2Days)
 
-	recipes.StopExecutionSeconds(2)
+	// recipes.StopExecutionSeconds(2)
+
+	recipes.Channel()
+	address := "Van Speijkstraat 48 - 3"
+	_, house := recipes.SeparateHouseNumber(address)
+
+	recipes.SeparateHouseNumberTest()
+
+	fmt.Printf("Address: %s, House: %s\n", address, house)
 }
