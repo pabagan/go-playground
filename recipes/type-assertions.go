@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-/
 func IsInt(t interface{}) bool {
 	_, ok := t.(int) // assert that the actual type is int
 
