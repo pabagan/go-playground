@@ -8,9 +8,9 @@ import (
 
 func main() {
 	now := recipes.GetTime()
-	add1day := recipes.AddDaysToDate(now, 1)
-	add1month := recipes.AddMonthsToDate(now, 1)
-	add1monthAnd2Days := recipes.AddDaysAndMonthsToDate(now, 1, 2)
+	add1day := recipes.AddDays(now, 1)
+	add1month := recipes.AddMonths(now, 1)
+	add1monthAnd2Days := recipes.AddDaysAndMonths(now, 1, 2)
 
 	recipes.LogTimes()
 

@@ -15,33 +15,23 @@ func GetTime() time.Time {
 }
 
 /*
-AddDaysToDate add days to date
+AddDays add days to date
 */
-func AddDaysToDate(
-	time time.Time,
-	days int,
-) time.Time {
+func AddDays(time time.Time, days int) time.Time {
 	return time.AddDate(0, 0, days)
 }
 
 /*
-AddMonthsToDate add months to date
+AddMonths add months to date
 */
-func AddMonthsToDate(
-	time time.Time,
-	months int,
-) time.Time {
+func AddMonths(time time.Time, months int) time.Time {
 	return time.AddDate(0, months, 0)
 }
 
 /*
-AddDaysAndMonthsToDate add days to date
+AddDaysAndMonths add days to date
 */
-func AddDaysAndMonthsToDate(
-	time time.Time,
-	months int,
-	days int,
-) time.Time {
+func AddDaysAndMonths(time time.Time, months, days int) time.Time {
 	return time.AddDate(0, months, days)
 }
 
