@@ -8,35 +8,35 @@ import (
 )
 
 /*
-GetTime get current Golang timestamp
+  GetTime get current Golang timestamp
 */
 func GetTime() time.Time {
 	return time.Now()
 }
 
 /*
-AddDays add days to date
+  AddDays add days to date
 */
 func AddDays(time time.Time, days int) time.Time {
 	return time.AddDate(0, 0, days)
 }
 
 /*
-AddMonths add months to date
+  AddMonths add months to date
 */
 func AddMonths(time time.Time, months int) time.Time {
 	return time.AddDate(0, months, 0)
 }
 
 /*
-AddDaysAndMonths add days to date
+  AddDaysAndMonths add days to date
 */
 func AddDaysAndMonths(time time.Time, months, days int) time.Time {
 	return time.AddDate(0, months, days)
 }
 
 /*
-Timer demo function
+  Timer demo function
 */
 func Timer() {
 	start := time.Now()
@@ -53,7 +53,7 @@ func Timer() {
 }
 
 /*
-StopExecutionSeconds for a duration of seconds
+  StopExecutionSeconds for a duration of seconds
 */
 func StopExecutionSeconds(seconds time.Duration) {
 	start := time.Now()
@@ -72,7 +72,7 @@ func StopExecutionSeconds(seconds time.Duration) {
 }
 
 /*
-LogTimes in diferent measures
+  LogTimes in diferent measures
 */
 func LogTimes() {
 	fmt.Printf("Minute: %s\n", time.Minute)
