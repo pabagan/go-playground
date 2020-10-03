@@ -18,3 +18,11 @@ func Log(print string) {
 func Print(print string) {
 	fmt.Println(print)
 }
+
+/*
+	Print create log console
+*/
+func TestLogs() {
+	Log("test Log")
+	Print("test Print")
+}

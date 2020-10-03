@@ -4,7 +4,7 @@ This [Git](https://github.com/pabagan/go-playground) is a project to work on dem
 
 ## Workflow
 
-Develop new recipes at `main.go`. Once achieved move the file to `/recipes` folder
+Develop new recipes at `main.go`. Once achieved move the file to `/recipes` folder. Export a function `Test*` from each recipe.
 
 ## Setting project
 

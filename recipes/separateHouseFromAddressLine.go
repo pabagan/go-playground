@@ -39,7 +39,7 @@ func SeparateHouseNumber(address string) (street string, house string) {
 	SeparateHouseNumberTest separate house
 	from test scenarios
 */
-func SeparateHouseNumberTest() {
+func TestSeparateHouseNumber() {
 	addresses := [...]string{
 		"2 Koningskinderenstraat 24 H",
 		"Plataanstraat 5",
