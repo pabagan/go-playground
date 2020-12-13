@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/pabagan/go-playground/recipes"
 )
 
 func init() {
@@ -28,6 +26,7 @@ func main() {
 	// recipes.TestEqualCheck()
 	// recipes.
 	// recipes.TestCompareInterfaces()
-	recipes.TestAppCLIFlags()
+	// recipes.TestAppCLIFlags()
+	routinesAndChannels.TestRoutinesAndChannel()
 
 }
