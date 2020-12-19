@@ -6,5 +6,5 @@
   "ignore": [
     "./cmd/main"
   ],
-  "exec": "go run main.go"
+  "exec": "go run httpClient/01-simple-http-client.go"
 }
